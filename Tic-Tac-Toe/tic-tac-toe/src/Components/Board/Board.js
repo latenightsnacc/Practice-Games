@@ -5,6 +5,7 @@ import Square from '../Square/Square';
 class Board extends React.Component{
 
     renderSquare(i) {
+<<<<<<< HEAD
         return (
             <Square  
             value = {this.props.squares[i]} 
@@ -14,6 +15,14 @@ class Board extends React.Component{
     }
     
     render() {
+=======
+        return <Square />;
+    }
+
+    render() {
+        const status = 'Next player: X';
+
+>>>>>>> parent of 036fcf6... Completed the game functionality.
         return (
             <div>
                 <div className="board-row">
