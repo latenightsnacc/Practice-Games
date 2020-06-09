@@ -8,6 +8,7 @@ class Board extends React.Component{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (
             <Square  
             value = {this.props.squares[i]} 
@@ -18,6 +19,8 @@ class Board extends React.Component{
     
     render() {
 =======
+=======
+>>>>>>> parent of 036fcf6... Completed the game functionality.
 =======
 >>>>>>> parent of 036fcf6... Completed the game functionality.
 =======
