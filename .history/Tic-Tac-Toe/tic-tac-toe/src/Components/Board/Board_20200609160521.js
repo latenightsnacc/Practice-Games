@@ -16,7 +16,7 @@ class Board extends React.Component{
         );
     }
     
-    // Renders the board for the game and displays the square component in 3 rows
+    // Renders the board for the game
     render() {
         return (
             <div>

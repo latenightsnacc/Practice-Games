@@ -26,21 +26,15 @@ class Game extends React.Component {
         if (calculateWinner(squares) || squares[i]) {
             return;
         }
-        // Checks if the boolean value of the state. If xIsNext is true then 'X' displays in the square component
-        // Else if xIsNext is false then 'O' displays in the square component
-    
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
-            // Concatenates new entries on the board to the history array
             history: history.concat([{
                 squares: squares,
             }]),
-            // Updates who the next player is by negating the boolean value of xIsNext
             xIsNext: !this.state.xIsNext
         });
     }
 
-    // Sets the step number in the state. If the stepNumber is 
     jumpTo(step) {
         this.setState({
             stepNumber: step,
@@ -54,11 +48,8 @@ class Game extends React.Component {
         const current = history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
 
-        const  moves = history.map( (step, move) => {
-
+        const  moves = history.map((step, move) => {
             const desc = move ? 'Go to move #' + move : 'Go to game start';
-
-            // For each move in the game history, create a new list item with the move description
             return (
                 <li key={move} className="game-moves" >
                     <button onClick={() => this.jumpTo(move)} > {desc} </button>
@@ -81,7 +72,7 @@ class Game extends React.Component {
                 </div>
                 <div className="game-info">
                     <div> {status} </div>
-                    <ol> {moves} </ol>
+                    <ol>{moves}</ol>
                 </div>
             </div>
         );

@@ -4,19 +4,18 @@ import Square from '../Square/Square';
 
 class Board extends React.Component{
 
-    // Renders the square on the board
     renderSquare(i) {
         return (
-            // The square component has a prop value and an on click event 
-            // When the user clicks on the square it displays either an 'X' or 'O'
             <Square  
             value = {this.props.squares[i]} 
-            onClick = { () => this.props.onClick(i)}
+            onClick = { i => this.props.onClick(i)}
             />
         );
     }
     
-    // Renders the board for the game and displays the square component in 3 rows
+    render() {
+    }
+
     render() {
         return (
             <div>
