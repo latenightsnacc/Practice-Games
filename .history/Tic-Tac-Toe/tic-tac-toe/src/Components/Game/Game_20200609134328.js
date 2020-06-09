@@ -7,18 +7,16 @@ class Game extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            history: [{
-                squares: Array(9).fill(null),
-            }],
-            xIsNext: true
-           
+            squares: Array(9).fill(null),
+            xIsNext: true,
+            history: []
         };
     }
 
     handleClick(i) {
         const history = this.state.history;
-        const current = history[history.length -1];
-        const squares = current.squares.slice();
+        // const current = history[history.length -1];
+        const squares = this.state.squares.slice();
         if (this.calculateWinner(squares) || squares[i]) {
             return;
         }
@@ -50,6 +48,7 @@ class Game extends React.Component {
         }
         return null;
     }
+
 
     render(){
         const history = this.state.history;
