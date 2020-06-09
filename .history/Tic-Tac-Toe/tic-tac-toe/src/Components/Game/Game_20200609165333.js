@@ -24,8 +24,11 @@ class Game extends React.Component {
         const history = this.state.history;
         const current = history[history.length -1];
         const squares = current.squares.slice();
-        if (calculateWinner(squares) || squares[i]) {
+        if (calculateWinner(squares)) {
             return;
+        }
+        if (squares[i]){
+            return <button className="Error"></button>
         }
         // Checks if the boolean value of the state. If xIsNext is true then 'X' displays in the square component
         // Else if xIsNext is false then 'O' displays in the square component

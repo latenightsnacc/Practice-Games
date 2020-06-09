@@ -10,7 +10,6 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "homepage": "https://latenightsnacc.github.io/Practice-Games",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",

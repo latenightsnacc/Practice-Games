@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <header className="Header">
-        <h1>Blind T<span className="span">x</span>3</h1>
+        <h1>Blind Tx3</h1>
       </header>
       <div className="App">
         <Game />
