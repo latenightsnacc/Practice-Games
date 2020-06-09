@@ -8,12 +8,16 @@ class Board extends React.Component{
         return (
             <Square  
             value = {this.props.squares[i]} 
-            onClick = { (i) => this.props.handleClick(i)}
+            onClick = { () => this.props.onClick(i)}
             />
         );
     }
     
     render() {
+    }
+
+    render() {
+        const status = 'Next player: X';
         return (
             <div>
                 <div className="board-row">
